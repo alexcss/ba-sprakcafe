@@ -1,0 +1,34 @@
+.ba-footer {
+	border-top: 5px solid #fff;
+	padding: 34px 0 25px;
+	background: $outer-space;
+	color: $medium-gray;
+}
+.ba-couchsurfing{
+	display: inline-block;
+	padding-left: 242px;
+	background: url(../img/couchsurfing.png) 0 50% no-repeat;
+	margin-bottom: 20px;
+}
+.ba-facebook{
+	display: inline-block;
+	width: 58px;
+	height: 58px;
+	background: url(../img/facebook.png) 50%;
+	background-size: cover;
+	&--light{
+		background-image: url(../img/facebook-white.png);
+	}
+	&:hover{
+		opacity: 0.7;
+	}
+}
+.ba-arrow{
+	display: inline-block;
+	padding-left: 85px;
+	background: url(../img/arrow-white.png) 0 50% no-repeat;
+	margin-top: 30px;
+	@include breakpoint(medium){
+		margin-top: 70px;
+	}
+}

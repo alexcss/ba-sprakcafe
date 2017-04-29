@@ -1,0 +1,131 @@
+.ba-about-desc{
+	background: $secondary-color;
+	color: #FFF;
+	margin-bottom: 65px;
+	padding: 25px 0;
+	font-size: 20px;
+	position: relative;
+	z-index: 0;
+	&:before,&:after{
+		content: '';
+		position: absolute;
+		top: 100%;
+		height: 100px;
+		width: 50%;
+		z-index: -1;
+		background: #FFF;
+	}
+	&:before{
+		left: 0;
+		transform: skewY(2deg);
+		transform-origin: top right;
+	}
+	&:after{
+		right: 0;
+		transform: skewY(-2deg);
+		transform-origin: top left;
+	}
+	&--corner {
+		padding: 0;
+	}
+	&--gray{
+		&:before,&:after{
+			background: $light-gray;
+		}
+	}
+	&--single{
+		background: $primary-color;
+		color: $black;
+		padding-bottom: 60px;
+		padding-top: 40px;
+	}
+}
+
+.ba-event{
+	margin-bottom: 60px;
+	&__body{
+		padding-left: 40px;
+		background: url(../img/icon-point.png) 0 11px no-repeat;
+		@include breakpoint(medium){
+			margin-left: -50px;
+		}
+	}
+	&__thumb{
+		margin-bottom: 15px;
+		display: block;
+	}
+	&__title{
+		color: $black;
+		a{
+			color: inherit;
+			&:before{
+				content: '«';
+			}
+			&:after{
+				content: '»';
+			}
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+	&__date{
+		display: block;
+		padding-left: 39px;
+		background: url(../img/icon-date.png) 0 10px no-repeat;
+		line-height: 1;
+		margin-bottom: 20px;
+		&--dark{
+			background-image: url(../img/icon-date-dark.png);
+		}
+	}
+	&__day{
+		font-size: 57px;
+	}
+	&__month{
+		font-size: 20px;
+		margin-left: -10px;
+	}
+	&__time{
+		display: block;
+		font-size: 23px;
+	}
+	&__address{
+		padding-left: 55px;
+		background: url(../img/icon-check.png) 0 10px no-repeat;
+		line-height: 1.5;
+		font-size: 15px;
+		min-height: 50px;
+		text-align: left;
+		@include breakpoint(small down){
+			margin-top: 10px;
+		}
+		@include breakpoint(medium){
+			margin-left: 20px;
+		}
+		&--dark{
+			background-image: url(../img/icon-check-dark.png);
+		}
+
+	}
+	&__cost{
+		padding-left: 55px;
+		background: 0 50% no-repeat;
+		line-height: 1;
+		font-size: 22px;
+		padding-top: 5px;
+		margin-top:10px;
+		margin-bottom: 20px;
+		text-align: left;
+		min-height: 27px;
+		@include breakpoint(medium){
+			margin-left: 20px;
+			margin-top: 25px;
+		}
+		&--dark{
+			background-image: url(../img/icon-wallet-dark.png);
+		}
+
+	}
+
+}

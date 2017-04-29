@@ -1,0 +1,42 @@
+.ba-single {
+	@include grid-row();
+	margin-top: 3rem;
+
+	.main-content {
+		@include breakpoint(small) {
+			@include grid-column(12);
+		}
+	}
+
+}
+.ba-single-title{
+	&:before{
+		content: '«';
+	}
+	&:after{
+		content: '»';
+	}
+	line-height: 1;
+	margin-bottom: 10px;
+}
+.entry-content{
+	font-size: 15px;
+	margin-bottom: 35px;
+	ul{
+		list-style: none;
+		margin-left: 0;
+		text-indent: -34px;
+		li{
+			padding-left: 34px;
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				background: $primary-color;
+				border-radius: 50%;
+				margin-right: 24px;
+			}
+		}
+	}
+}

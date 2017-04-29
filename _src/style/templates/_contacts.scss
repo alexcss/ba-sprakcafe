@@ -1,0 +1,44 @@
+.ba-contact{
+	text-align: center;
+	color: $dark-gray;
+	margin-bottom: 40px;
+	&__img{
+		border-radius: 	50%;
+		display: block;
+		margin: 0 auto 15px;
+	}
+	&__name{
+		font-size: 27px;
+		margin: 0;
+	}
+	&__phone{
+		color: inherit;
+		display: block;
+	}
+	&__facebook{
+		width: 27px;
+		height: 27px;
+	}
+}
+.ba-contact-form{
+	max-width: 680px;
+	margin: 80px auto 0;
+	&__title{
+		color: $dark-gray;
+		text-align: center;
+		margin-bottom: 20px;
+		@include breakpoint(medium){
+			font-size: 30px;
+		}
+	}
+	.row{
+		.column:first-child{
+			@include breakpoint(medium){
+				padding-right: 7px;
+			}
+		}
+	}
+	textarea{
+		height: 150px;
+	}
+}
